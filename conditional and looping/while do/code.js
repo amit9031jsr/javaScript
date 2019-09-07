@@ -1,0 +1,21 @@
+var x = 0;
+while(x < 5){
+    console.log(x);
+    x ++;
+}
+
+var balance = prompt("How much would you like to spent?");
+var itemNumber = 0;
+while(balance > 0){
+    //pick a random item
+    var itemPrice = Math.floor(1 + 100*Math.random());
+    if(itemPrice <= balance){
+        //buy the item
+        itemNumber += 1;
+        //update balance
+        balance -= itemPrice;
+        //print the new balance and the purchase amount
+        console.log(itemNumber + ". Item Price: $" + itemPrice);
+        console.log("Balance: $" + balance + ".");
+    }
+}
